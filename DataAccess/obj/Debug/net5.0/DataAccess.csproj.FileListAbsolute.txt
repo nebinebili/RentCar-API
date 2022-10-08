@@ -1,0 +1,15 @@
+C:\Users\Admin\source\repos\RentCarProject\DataAccess\bin\Debug\net5.0\DataAccess.deps.json
+C:\Users\Admin\source\repos\RentCarProject\DataAccess\bin\Debug\net5.0\DataAccess.dll
+C:\Users\Admin\source\repos\RentCarProject\DataAccess\bin\Debug\net5.0\ref\DataAccess.dll
+C:\Users\Admin\source\repos\RentCarProject\DataAccess\bin\Debug\net5.0\DataAccess.pdb
+C:\Users\Admin\source\repos\RentCarProject\DataAccess\bin\Debug\net5.0\Entities.dll
+C:\Users\Admin\source\repos\RentCarProject\DataAccess\bin\Debug\net5.0\Entities.pdb
+C:\Users\Admin\source\repos\RentCarProject\DataAccess\obj\Debug\net5.0\DataAccess.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\RentCarProject\DataAccess\obj\Debug\net5.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\RentCarProject\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\RentCarProject\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfo.cs
+C:\Users\Admin\source\repos\RentCarProject\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\RentCarProject\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CopyComplete
+C:\Users\Admin\source\repos\RentCarProject\DataAccess\obj\Debug\net5.0\DataAccess.dll
+C:\Users\Admin\source\repos\RentCarProject\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
+C:\Users\Admin\source\repos\RentCarProject\DataAccess\obj\Debug\net5.0\DataAccess.pdb
