@@ -16,6 +16,22 @@ namespace Business.Concrete
         public CarManager(ICarDal carDal)
         {
             _carDal = carDal;
-        } 
+        }
+
+        public void Add(Car car)
+        {
+            if (car.DailyPrice > 0) _carDal.Add(car);
+            else Console.WriteLine("Daily Price must big than 0");
+        }
+
+        public List<Car> GetCarsByBrandId(int id)
+        {
+            return _carDal.GetAll(c => c.BrandId == id);
+        }
+
+        public List<Car> GetCarsByColorId(int id)
+        {
+            return _carDal.GetAll(c => c.ColorId == id);
+        }
     }
 }
