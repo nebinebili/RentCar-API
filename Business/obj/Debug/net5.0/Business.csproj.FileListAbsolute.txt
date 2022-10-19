@@ -15,3 +15,5 @@ C:\Users\Admin\source\repos\RentCarProject\Business\obj\Debug\net5.0\Business.cs
 C:\Users\Admin\source\repos\RentCarProject\Business\obj\Debug\net5.0\Business.dll
 C:\Users\Admin\source\repos\RentCarProject\Business\obj\Debug\net5.0\ref\Business.dll
 C:\Users\Admin\source\repos\RentCarProject\Business\obj\Debug\net5.0\Business.pdb
+C:\Users\Admin\source\repos\RentCarProject\Business\bin\Debug\net5.0\Core.dll
+C:\Users\Admin\source\repos\RentCarProject\Business\bin\Debug\net5.0\Core.pdb

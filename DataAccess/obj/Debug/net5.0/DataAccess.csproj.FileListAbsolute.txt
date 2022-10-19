@@ -13,3 +13,5 @@ C:\Users\Admin\source\repos\RentCarProject\DataAccess\obj\Debug\net5.0\DataAcces
 C:\Users\Admin\source\repos\RentCarProject\DataAccess\obj\Debug\net5.0\DataAccess.dll
 C:\Users\Admin\source\repos\RentCarProject\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
 C:\Users\Admin\source\repos\RentCarProject\DataAccess\obj\Debug\net5.0\DataAccess.pdb
+C:\Users\Admin\source\repos\RentCarProject\DataAccess\bin\Debug\net5.0\Core.dll
+C:\Users\Admin\source\repos\RentCarProject\DataAccess\bin\Debug\net5.0\Core.pdb
