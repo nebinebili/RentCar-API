@@ -1,4 +1,6 @@
 ﻿using Business.Abstract;
+using Business.Constant;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using Entities.DTOs;
@@ -19,25 +21,38 @@ namespace Business.Concrete
             _carDal = carDal;
         }
 
-        public void Add(Car car)
+        public IResult Add(Car car)
         {
-            if (car.DailyPrice > 0) _carDal.Add(car);
-            else Console.WriteLine("Daily Price must big than 0");
+            if (car.DailyPrice > 0)
+            {
+                _carDal.Add(car);
+                return new SuccessResult(Messages.Added);
+            }
+            else return new ErrorResult(Messages.PriceInvalid);
         }
 
-        public List<CarDetailDto> GetCarDetails()
+        public IDataResult<List<CarDetailDto>> GetCarDetails()
         {
-            return _carDal.GetCarDetails();
+            return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails(),Messages.CarListed);
         }
 
-        public List<Car> GetCarsByBrandId(int id)
+        public IDataResult<List<Car>> GetCarsByBrandId(int id)
         {
-            return _carDal.GetAll(c => c.BrandId == id);
+            if (_carDal.GetAll().Any(c => c.BrandId == id))
+            {
+                return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.BrandId == id), Messages.CarListed);
+            }
+            else return new ErrorDataResult<List<Car>>(Messages.IdNotFound);
+
         }
 
-        public List<Car> GetCarsByColorId(int id)
+        public IDataResult<List<Car>> GetCarsByColorId(int id)
         {
-            return _carDal.GetAll(c => c.ColorId == id);
+            if (_carDal.GetAll().Any(c => c.ColorId == id))
+            {
+                return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.ColorId == id),Messages.CarListed);
+            }
+            else return new ErrorDataResult<List<Car>>(Messages.IdNotFound);
         }
     }
 }
