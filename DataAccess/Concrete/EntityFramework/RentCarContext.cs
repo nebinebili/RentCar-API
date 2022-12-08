@@ -12,7 +12,7 @@ namespace DataAccess.Concrete.EntityFramework
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-2EKP2NR;Initial Catalog=RentCarDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-DA5EORS;Initial Catalog=RentCarDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
         }
 
         public DbSet<Car> Cars { get; set; }
@@ -26,5 +26,7 @@ namespace DataAccess.Concrete.EntityFramework
         public DbSet<Customer> Customers { get; set; }
 
         public DbSet<Rental> Rentals { get; set; }
+
+        public DbSet<CarImage> CarImages { get; set; }
     }
 }
