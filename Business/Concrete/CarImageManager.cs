@@ -4,6 +4,7 @@ using Core.Utilities.Helpers.FileHelper;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
@@ -24,10 +25,14 @@ namespace Business.Concrete
             _fileHelper = fileHelper;
         }
 
-        public IResult Add(IFormFile file, CarImage carImage)
+        public IResult Add(IFormFile file, CarImageDto carImageDto)
         {
-            carImage.ImagePath = _fileHelper.Upload(file, PathConstants.ImagesPath);
-            carImage.Date= DateTime.Now;
+            var carImage = new CarImage()
+            {
+                CarId = carImageDto.CarId,
+                ImagePath = _fileHelper.Upload(file, PathConstants.ImagesPath),
+                Date = DateTime.Now,
+            };         
             _carImageDal.Add(carImage);
             return new SuccessResult(Messages.Added);
         }

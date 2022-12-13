@@ -1,5 +1,6 @@
 ﻿using Business.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,9 +16,9 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("add")]
-        public IActionResult Add([FromForm] IFormFile file, [FromForm] CarImage carImage)
+        public IActionResult Add(IFormFile file,  CarImageDto carImageDto)
         {
-            var result = _carImageService.Add(file, carImage);
+            var result = _carImageService.Add(file, carImageDto);
             if (result.Success)
             {
                 return Ok(result);
