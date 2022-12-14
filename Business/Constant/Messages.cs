@@ -21,5 +21,6 @@ namespace Business.Constant
         public static string RentalListed = "Rentals Listed";
         public static string IdNotFound = "This id is not available";
         public static string ReturnDateNull = "Return date is null";
+        public static string MaxImageCountExceed="Maximum image count is exceeded";
     }
 }
