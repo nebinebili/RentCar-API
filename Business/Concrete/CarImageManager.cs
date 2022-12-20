@@ -44,14 +44,20 @@ namespace Business.Concrete
             return new SuccessResult(Messages.Added);
         }
 
-        public IResult Delete(CarImage carImage)
+        public IResult Delete(CarImageUpdateDeleteDto carImage)
         {
-            throw new NotImplementedException();
+            var deletedCarImage = _carImageDal.Get(c => c.Id == carImage.Id);
+            _fileHelper.Delete(PathConstants.ImagesPath+ deletedCarImage.ImagePath);
+            _carImageDal.Delete(deletedCarImage);
+            return new SuccessResult(Messages.Deleted);
         }
 
-        public IResult Update(IFormFile file, CarImage carImage)
+        public IResult Update(IFormFile file, CarImageUpdateDeleteDto carImage)
         {
-            throw new NotImplementedException();
+            var updatedCarImage = _carImageDal.Get(c => c.Id == carImage.Id);
+            updatedCarImage.ImagePath=_fileHelper.Update(file, PathConstants.ImagesPath+updatedCarImage.ImagePath, PathConstants.ImagesPath);
+            _carImageDal.Update(updatedCarImage);
+            return new SuccessResult(Messages.Updated);
         }
 
         public IDataResult<List<CarImage>> GetAll()
